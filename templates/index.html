@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HOME
+        </title>
+    </head>
+    <body>
+        <!-- HEADER contains the title for the webpage  -->
+        <div class="header">
+
+        </div>
+
+        <!-- 
+            MAIN CONTENT of the site where user can 
+                1) CREATE a new entry to the Phone Book
+                2) READ a specific entry
+                3) DELETE an entry from the Phone Book
+                4) UPDATE an existing entry in the Phone Book
+        -->
+        <div class="content">
+            <!-- User can make a new entry right from the home page -->
+            <div id="new_entry">
+                <div id="new_entry_title">
+                    <em>
+                        NEW ENTRY
+                    </em>
+                </div>
+                
+                <div id="new_id_body">
+                    <form method="POST" action="/">
+                        
+                        <label for="name">Name</label>
+                        <input type="text" name="name">
+                        
+                        <br>
+                        
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone">
+                        
+                        <br>
+                        
+                        <label for="email">Email</label>
+                        <input type="text" name="email">
+                        
+                        <br>
+                        
+                        <label for="address">Address</label>
+                        <input type="text" name="address">
+                        
+                        <br>
+                        
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <!-- 
+                If the user has to SEARCH, VIEW, DELETE, UPDATE then go to this page
+            -->
+            <div id="go_to_display">
+                <a href="{{url_for('display')}}">
+                    <button type="button">
+                        VIEW DIRECTORY
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- FOOTER contains information about the author and related links -->
+        <div class="footer">
+            
+        </div>
+    </body>
+</html>
+

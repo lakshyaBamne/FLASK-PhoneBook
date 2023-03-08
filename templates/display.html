@@ -1,0 +1,55 @@
+<!--
+    DISPLAY PAGE just shows all the entries in the Phone Book
+    in Alphabetic order in a nice and simple tabular format
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DIRECTORY
+        </title>
+    </head>
+    <body>
+        <!-- TITLE for this page and some design -->
+        <div class="header">
+            <div id="display_page_title">
+
+            </div>
+
+            <div id="back_to_home">
+                <a href="/">
+                    <button type="button">
+                        HOME
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <table id="contact_list">
+                <tr>
+                    <th>NAME</th>
+                    <th>CONTACT NO.</th>
+                    <th>EMAIL</th>
+                    <th>ADDRESS</th>
+                </tr>
+
+                {% for contact in contacts %}
+                    <tr>
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.phone}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.address}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        
+        <!-- FOOTER contains information about the author and related links -->
+        <div class="footer">
+            
+        </div>
+    </body>
+</html>
+
